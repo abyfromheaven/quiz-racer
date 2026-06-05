@@ -1,0 +1,40 @@
+@import "tailwindcss";
+
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+}
+
+body {
+  margin: 0;
+  display: flex;
+  place-items: center;
+  min-width: 320px;
+  min-height: 100vh;
+}
+
+#game-container {
+  overflow: hidden;
+}
+
+canvas {
+  width: 100% !important;
+  height: 100% !important;
+  display: block;
+}
+
+.option-btn:active {
+  transform: translateY(2px);
+  border-bottom-width: 2px;
+}
+
+@keyframes flashRed {
+  0% { background-color: rgba(220, 38, 38, 0); }
+  50% { background-color: rgba(220, 38, 38, 0.5); }
+  100% { background-color: rgba(220, 38, 38, 0); }
+}
+
+.flash-red {
+  animation: flashRed 0.3s ease-out;
+}
